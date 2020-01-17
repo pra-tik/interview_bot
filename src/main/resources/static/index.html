@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Test</title>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	
+<script type="text/javascript">
+	function submit_ans() {
+    	  var data_String = document.getElementById("textbox").value;
+    	  $.ajax({
+    		  type: "POST",
+    		  url:"/subjective",
+    		  data: {
+    		        "dataString": document.getElementById("textbox").value
+    		    },
+    		});
+      }
+	
+      function proc_question(){
+    	responsiveVoice.speak('What is a class in java');
+      }
+      
+     
+     
+    </script>
+</head>
+
+
+
+<body onload="proc_question()">
+
+<script>
+function proc_question(){
+	responsiveVoice.speak('What is a class in java');
+  }
+</script>
+
+<p>Hello Tarun, welcome to Interview Bot</p>
+
+<h1>What is class in java ?</h1>
+
+<form action="javascript:submit_ans()">
+  Answer:<br>
+  <div class="mywebapp"> 
+                <div class="input">
+                    <textarea id="textbox" rows="6"></textarea>
+                </div>         
+                <p id="instructions">Press the Start button</p>
+            </div>
+        </div>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+  		                <button id="start-btn" title="Start">Speak Now</button>
+  		
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+  
+
+</body>
+</html>
