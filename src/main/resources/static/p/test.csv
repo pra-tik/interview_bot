@@ -1,0 +1,17 @@
+A class is a user defined blueprint or prototype from which objects are created.  It represents the set of properties or methods that are common to all objects of one type.
+"A class, in the context of Java, are templates that are used to create objects, and to define object data types and methods."
+ A class can be defined as a template/blueprint that describes the behavior/state that the object of its type support.
+A class is a blueprint from which individual objects are created
+" A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.
+A class in Java can contain:
+Fields
+Methods
+Constructors
+Blocks
+Nested class and interface"
+"Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake.
+A Class is like an object constructor, or a ""blueprint"" for creating objects."
+"A class is an entity that determines how an object will behave and what the object will contain. In other words, it is a blueprint or a set of instruction to build a specific type of object."
+"In the real world, you'll often find many individual objects all of the same kind. There may be thousands of other bicycles in existence, all of the same make and model. Each bicycle was built from the same set of blueprints and therefore contains the same components. In object-oriented terms, we say that your bicycle is an instance of the class of objects known as bicycles. A class is the blueprint from which individual objects are created"
+"A class is a blueprint for the object.
+We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object"

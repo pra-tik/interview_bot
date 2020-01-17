@@ -2,17 +2,29 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script type="text/javascript">
 	function submit_form() {
-    	  var data_String = document.getElementById("textbox").value;
-    	  $.ajax({
+  /*   	 $.ajax({
     		  type: "POST",
     		  url:"/quiz",
     		  data: {
     		        "email": document.getElementById("email").value,
     		        "exp":document.getElementById("experience").value
     		    },
-    		});
+    		  success: function (msg) {
+    			  console.log(msg)
+    			  var email = msg.
+    			  window.open('./quiz.html?email')
+    		          
+
+    		  }
+    		}); */
+		sessionStorage.setItem("email", document.getElementById("email").value);
+		sessionStorage.setItem("exp", document.getElementById("experience").value);
+		window.open('./quiz.html')
+
       }
 </script>
 <style>
@@ -148,7 +160,7 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="javascript:submit_form()">
+  <form class="modal-content animate" action="javascript:submit_form()" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title=" {{ Inerview_Bot }}">&times;</span>
       <img src="img/user.png" alt="Avatar" class="avatar">
@@ -159,11 +171,9 @@ span.psw {
       <input type="text" id="email" placeholder="email" name="email" required>
       Experience :
       <input type="text" id="experience" placeholder="experience" name="experience" required>
-        
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
+      
       <button type="submit">Take a test</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
     </div>
   </form>
 </div>

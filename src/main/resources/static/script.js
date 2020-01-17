@@ -1,3 +1,21 @@
+function submit_ans() {
+    	  var data_String = document.getElementById("textbox").value;
+    	  $.ajax({
+    		  type: "POST",
+    		  url:"/subjective",
+    		  data: {
+    		        "dataString": document.getElementById("textbox").value
+    		        "questionId": "1",
+    		        "email" :sessionStorage.getItem("email")
+    		    },
+    		});
+      }
+	
+      function proc_question(){
+    	responsiveVoice.speak('What is a class in java');
+      }
+      
+     
 var SpeechRecognition = window.webkitSpeechRecognition;
   
 var recognition = new SpeechRecognition();

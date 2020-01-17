@@ -10,7 +10,9 @@
     		  type: "POST",
     		  url:"/subjective",
     		  data: {
-    		        "dataString": document.getElementById("textbox").value
+    		        "dataString": document.getElementById("textbox").value,
+    		        "questionId": "1",
+    		        "email" :sessionStorage.getItem("email")
     		    },
     		});
       }
